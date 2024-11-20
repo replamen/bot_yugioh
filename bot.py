@@ -4,7 +4,7 @@ import requests
 import re
 import os
 from dotenv import load_dotenv
-from site_b import boucle
+from keep_alive import keep_alive
 
 load = load_dotenv()
 # Remplace ton token ici
@@ -69,5 +69,5 @@ async def on_ready():
 
 
 # Lancer Flask, les pings, et le bot
+keep_alive()
 bot.run(str(TOKEN))
-boucle()
