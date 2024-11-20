@@ -2,9 +2,14 @@ import discord
 from discord.ext import commands
 import requests
 import re
+import os
+from dotenv import load_dotenv
+from site_b import boucle
 
+load = load_dotenv()
 # Remplace ton token ici
-TOKEN = "MTMwODcxNDU3NjYxNDkxNjE4Ng.GsQMmJ.JnSIYQJ6k3pVhZV6jGomxqUuEVMOVANExJUUFQ"
+TOKEN = os.getenv('TOKEN')
+"MTMwODcxNDU3NjYxNDkxNjE4Ng.GsQMmJ.JnSIYQJ6k3pVhZV6jGomxqUuEVMOVANExJUUFQ"
 
 if not TOKEN:
   raise ValueError(
@@ -64,4 +69,5 @@ async def on_ready():
 
 
 # Lancer Flask, les pings, et le bot
-bot.run(TOKEN)
+bot.run(str(TOKEN))
+boucle()
