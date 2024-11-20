@@ -6,7 +6,7 @@ import os
 from keep_alive import keep_alive
 
 # Remplace ton token ici
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = "MTMwODcxNDU3NjYxNDkxNjE4Ng.GuyQk_.lzV7krhCPXlSuVqkIk50vZShlCQ77adL3xlm-M"
 
 intents = discord.Intents.default()
 intents.message_content = True
